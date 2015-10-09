@@ -1,6 +1,6 @@
 <?php
 
-class Categoria{
+class Categoria{1
 
 	public function insert($objeto) {
 
