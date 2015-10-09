@@ -1,7 +1,7 @@
 <?php 
 
 class Venta {
-	public $tabla = "productos";
+	public $tabla = "venta";
 
 
 	/**
@@ -57,9 +57,8 @@ class Venta {
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql = "SELECT * FROM " . $this->tabla . " WHERE id={$id_venta}";
+		$sql = "SELECT * FROM " . $this->tabla;
 		return $sql;
-
 		// ejectuar consulta
 		$consulta = mysqli_query($conexion->obtener(), $sql);
 
