@@ -47,3 +47,4 @@ class tipo_operacion {
 
 
 }
+?>
