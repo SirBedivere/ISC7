@@ -1,114 +1,71 @@
 <?php 
+include("../Conexion/Conexion.php");
+include("../Beans/Venta.php");
+
 
 class Venta {
 	public $tabla = "venta";
-
-
 	/**
 	 * Insert
 	 */
-	public function insert($objeto) {
+	public function insert($venta) {
 
 		// abrir conexión BD
 		$conexion = new Conexion();
 
 		//insertar 
-		$sql = "INSERT INTO " . $this->tabla . " (id_venta, estatus, FechaCreacion, usuario_id, tipo_operacion_id, carritocompra) VALUES 
-			('{$objeto->id_venta}', '{$objeto->estatus}','{$objeto->FechaCreacion}','{$objeto->usuario_id}','{$objeto->tipo_operacion_id,,'{$objeto->carritocompra}'}')";
-
-		// ejectuar consulta
-		mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
+		$sql = "INSERT INTO " . $this->tabla . " (idVenta,estatus,fechaCreacion,usuario,tipoOperacion,carritoCompra) VALUES 
+			('{$venta->idVenta}', '{$venta->estatus}','{$venta->fechaCreacion}','{$venta->usuario}','{$venta->tipoOperacion,}','{$venta->carritoCompra}')";
+		return $conexion->ejecutar($sql);
 	}
-
-
-
 	/**
 	 * Find by ID
 	 */
 	public function findByID($id) {
-
 		// abrir conexión BD
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql = "SELECT * FROM " . $this->tabla . " WHERE id={$id_venta}";
-		return $sql;
-
-		// ejectuar consulta
-		$consulta = mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
-
-		return mysqli_fetch_object($consulta);
-
-	}
-
-
+		$sql = "SELECT * FROM " . $this->tabla . " WHERE id={$idVenta}";
+		return $conexion->ejecutar($sql);
+		}
 	/**
 	 * Find All
 	 */
 	public function findAll() {
-
 		// abrir conexión BD
 		$conexion = new Conexion();
-
 		// generar SQL del DAO
 		$sql = "SELECT * FROM " . $this->tabla;
-		return $sql;
-		// ejectuar consulta
-		$consulta = mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
-
+		return $conexion->ejecutar($sql);
 		$resultados = array();
 		while ($row = mysqli_fetch_object($consulta)) {
 			$resultados[] = $row;
 		}
-
 		return $resultados;	
-
 	}
-
-
 	/**
 	 * Delete
 	 */
 	public function delete($id) {
-
 		// abrir conexión BD
 		$conexion = new Conexion();
-
 		// generar SQL del DAO
-		$sql = "DELETE FROM " . $this->tabla . " WHERE id={$id_venta}";
-
-		mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
+		$sql = "DELETE FROM " . $this->tabla . " WHERE id={$idVenta}";
+		return $conexion->ejecutar($sql);
 
 	}
-
-
 	/**
 	 * Actualizar
 	 */
-	public function update($objeto) {
+	public function update($venta) {
 
 		// abrir conexión BD
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql = "UPDATE " . $this->tabla . " SET estatus='{$objeto->estatus}', FechaCreacion='{$objeto->FechaCreacion}', usuario_id='{$objeto->usuario_id}' WHERE id={$objeto->id_venta}";
-		// ejectuar consulta
-		mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
+		$sql = "UPDATE " . $this->tabla . " SET estatus='{$venta->estatus}', FechaCreacion='{$venta->fechaCreacion}', usuario_id='{$venta->usuario}' WHERE id={$venta->idVenta}";
+		return $conexion->ejecutar($sql);
 
 	}
 
