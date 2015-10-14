@@ -2,7 +2,7 @@
 	public class Categoria{
 	
 	var $id_categoria;
-	var $status;
+	var $estatus;
 	var $fecha_creacion;
 	var $nombre_categoria;
 	var $descripcion_categoria;

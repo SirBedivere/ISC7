@@ -1,113 +1,59 @@
 <?php
+include("../Conexion/Conexion.php");
+include("../Beans/Categoria.php");
 
 class Categoria{
 
-	public function insert($objeto) {
+	public function insert($categoria) {
 
-		// abrir conexión BD
 		$conexion = new Conexion();
-
-		// generar SQL del DAO
-		$sql = "INSERT INTO " . $this->tabla . " (id_categoria, status, fecha_creacion) VALUES ('{$objeto->id_categoria}','{$objeto->status}','{$objeto->fecha_creacion}')";
-		$sql = $dao->insert($objeto);
-
-		// ejectuar consulta
-		mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
+		$sql = "INSERT INTO " . $this->tabla . " (id_categoria, status, fecha_creacion, nombre_categoria, descripcion_categoria, creado_el_categoria) VALUES ('{$objeto->id_categoria}','{$objeto->estatus}','{$objeto->fecha_creacion}','{$objeto->nombre_categoria}','{$objeto->descripcion_categoria}','{$objeto->fecha_creacion}','{$objeto->creado_el_categoria}')";
+		return $conexion->ejecutar($sql);
 	}
 
 
 
-	/**
-	 * Find by ID
-	 */
+	
 	public function findByID($id) {
 
-		// abrir conexión BD
 		$conexion = new Conexion();
 
-		// generar SQL del DAO
 		$sql = "SELECT * FROM " . $this->tabla . " WHERE id={$id_categoria}";
 		$sql = $dao->findByID($id);
-
-		// ejectuar consulta
-		$consulta = mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
-
-		return mysqli_fetch_object($consulta);
+		return $conexion->ejecutar($sql);
 
 	}
 
 
-	/**
-	 * Find All
-	 */
+
 	public function findAll() {
 
-		// abrir conexión BD
 		$conexion = new Conexion();
-
-		// generar SQL del DAO
 		$sql = "SELECT * FROM " . $this->tabla;
 		$sql = $dao->findAll($id);
-
-		// ejectuar consulta
-		$consulta = mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
-
-		$resultados = array();
-		while ($row = mysqli_fetch_object($consulta)) {
-			$resultados[] = $row;
-		}
-
-		return $resultados;	
+		return $conexion->ejecutar($sql);
 
 	}
 
 
-	/**
-	 * Delete
-	 */
+
 	public function delete($id) {
 
-		// abrir conexión BD
 		$conexion = new Conexion();
-
-		// generar SQL del DAO
 		$sql = "DELETE FROM " . $this->tabla . " WHERE id={$id_categoria}";
 		$sql = $dao->delete($id);
-
-		mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
+		return $conexion->ejecutar($sql);
 
 	}
 
 
-	/**
-	 * Actualizar
-	 */
+
 	public function update($objeto) {
 
-		// abrir conexión BD
 		$conexion = new Conexion();
-
-		// generar SQL del DAO
-		$sql = "UPDATE " . $this->tabla . " SET usuario='{$objeto->id_categoria}', password='{$objeto->status}', direccion='{$objeto->fecha_creacion}' WHERE id={$objeto->id_categoria}";
+		$sql = "UPDATE " . $this->tabla . " SET usuario='{$objeto->id_categoria}', password='{$objeto->estatus}', direccion='{$objeto->fecha_creacion}' WHERE id={$objeto->id_categoria}";
 		$sql = $dao->update($objeto);
-
-		// ejectuar consulta
-		mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
+		return $conexion->ejecutar($sql);
 
 	}
 
