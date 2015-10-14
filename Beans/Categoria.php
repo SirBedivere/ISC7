@@ -4,13 +4,9 @@
 	var $id_categoria;
 	var $status;
 	var $fecha_creacion;
-	var $ropa;
-	var $calzado;
-	var $electronica;
-	var $perfumeria;
-	var $jugueteria;
-	var $utensilios_hogar;
-	var $otros;
+	var $nombre_categoria;
+	var $descripcion_categoria;
+	var $creado_el_categoria;
 	
 	}
 ?>
