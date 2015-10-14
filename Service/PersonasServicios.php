@@ -1,5 +1,8 @@
 <?php 
 
+include("../Conexion/Conexion.php");
+include("../Beans/Persona.php");
+
 class PersonaServicio {
 
 
@@ -15,10 +18,7 @@ class PersonaServicio {
 		$sql =  "INSERT INTO " sthis->tabla."(id_persona,direccion,cumpleaños,telefono,estatus,fechaDeCreacion);"
 
 		// ejectuar consulta
-		mysqli_query($conexion->obtener(), $sql);
-
-		// cerrar conexión BD
-		$conexion->cerrar();
+		return $conexion->ejecutar($sql);
 	}
 
 
