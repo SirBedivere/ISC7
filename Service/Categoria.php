@@ -8,7 +8,7 @@ class Categoria{
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql = "INSERT INTO " . $this->tabla . " (usuario, password, direccion) VALUES ('{$objeto->id_categoria}','{$objeto->status}','{$objeto->fecha_creacion}')";
+		$sql = "INSERT INTO " . $this->tabla . " (id_categoria, status, fecha_creacion) VALUES ('{$objeto->id_categoria}','{$objeto->status}','{$objeto->fecha_creacion}')";
 		$sql = $dao->insert($objeto);
 
 		// ejectuar consulta
