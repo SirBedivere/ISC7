@@ -1,12 +1,12 @@
 <?php
 class Operacion 
 {
-	var $id_operacion
+	var $idOperacion
 	var $producto 
 	var $descripcion
-	var $tipo_operacion
+	var $tipoOperacion
 	var $venta
-	var $fecha_creacion
+	var $fechaCreacion
 	var $status
 	
 }
