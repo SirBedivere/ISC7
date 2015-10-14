@@ -1,6 +1,7 @@
 <?php
 include("../Conexion/Conexion.php");
 include("../Beans/Operacion.php");
+include("ProductoServicio.php");
 
 class Operacion {
 
@@ -27,13 +28,23 @@ class Operacion {
 	public function findByID($id_operacion) {
 		$conexion = new Conexion();
 		$sql = "SELECT * FROM " . $this->tabla . " WHERE id_operacion={$id_operacion}";
-		return $conexion->ejecutar($sql);
+		return this->crearObjeto($conexion->ejecutar($sql));
 	}
 
 	public function findAll() {
 		$conexion = new Conexion();
 		$sql = "SELECT * FROM " . $this->tabla;
 		return $conexion->ejecutar($sql);
+	}
+	
+	private function crearObjeto($resultado){
+		$operacion = new Operacion();
+		$operacion->idOperacion=$resultado->idOperacion;
+		$operacion->descripcion=$resultado->descripcion;
+		
+		$productoServicio = new ProductoServicio();
+		$operacion->producto=$productoServicio->findById($resultado->idProducto);
+		return operacion;
 	}
 
 
