@@ -7,7 +7,7 @@ class Operacion
 	var $tipoOperacion
 	var $venta
 	var $fechaCreacion
-	var $status
+	var $estatus
 	
 }
 ?>

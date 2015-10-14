@@ -10,7 +10,6 @@ class Operacion {
 		$conexion = new Conexion();
 		$sql = "INSERT INTO " . $this->tabla . " (id_operacion, id_producto, descripcion, id_tipo_operacion, id_venta, fecha_creacion) VALUES ('{$objeto->id_operacion}','{$objeto->producto->idProducto}','{$objeto->descripcion}','{$objeto->tipOperacion->idTipoOperacion}','{$objeto->venta->idVenta}','{$objeto->fechaCreacion}')";
 		return $conexion->ejecutar($sql);
-		
 	}
 
 	public function update($objeto) {
