@@ -38,11 +38,7 @@ class Venta {
 		// generar SQL del DAO
 		$sql = "SELECT * FROM " . $this->tabla;
 		return $conexion->ejecutar($sql);
-		$resultados = array();
-		while ($row = mysqli_fetch_object($consulta)) {
-			$resultados[] = $row;
-		}
-		return $resultados;	
+	
 	}
 	/**
 	 * Delete
