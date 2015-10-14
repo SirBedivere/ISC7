@@ -1,11 +1,13 @@
 <?php
 
-	public class usuario{
+	public class Usuario{
 		
-	var $nombre;
+	var $id;
 	var $apellido;
+	var $nombre;
 	var $email;
-	var $rol;
+	var $password;
+	var $imagen;
 	}
 	
 ?>	
