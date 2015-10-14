@@ -14,7 +14,7 @@ class Operacion {
 
 	public function update($objeto) {
 		$conexion = new Conexion();
-		$sql = "UPDATE " . $this->tabla . " SET producto='{$objeto->producto}', descripcion='{$objeto->descripcion}' tipo_operacion='{$objeto->tipo_operacion}', venta='{$objeto->venta}', fecha_creacion='{$objeto->fecha_creacion}' WHERE id_operacion={$objeto->id_operacion}";
+		$sql = "UPDATE " . $this->tabla . " SET producto='{$objeto->producto->idProducto}', descripcion='{$objeto->descripcion}' tipo_operacion='{$objeto->tipOperacion->idTipoOperacion}', venta='{$objeto->venta->idVenta}', fecha_creacion='{$objeto->fechaCreacion}' WHERE id_operacion={$objeto->id_operacion}";
 		return $conexion->ejecutar($sql);
 	}
 
