@@ -7,7 +7,7 @@ class Categoria{
 	public function insert($categoria) {
 
 		$conexion = new Conexion();
-		$sql = "INSERT INTO " . $this->tabla . " (id_categoria, status, fecha_creacion, nombre_categoria, descripcion_categoria, creado_el_categoria) VALUES ('{$objeto->id_categoria}','{$objeto->estatus}','{$objeto->fecha_creacion}','{$objeto->nombre_categoria}','{$objeto->descripcion_categoria}','{$objeto->fecha_creacion}','{$objeto->creado_el_categoria}')";
+		$sql = "INSERT INTO " . $this->tabla . " (idCategoria, estatus, fechaCreacion, nombreCategoria, descripcionCategoria, creadoCategoria) VALUES ('{$objeto->idCategoria}','{$objeto->estatus}','{$objeto->fechaCreacion}','{$objeto->nombreCategoria}','{$objeto->descripcionCategoria}','{$objeto->fechaCreacion}','{$objeto->creadoCategoria}')";
 		return $conexion->ejecutar($sql);
 	}
 

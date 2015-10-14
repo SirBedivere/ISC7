@@ -1,12 +1,12 @@
 <?php
 	public class Categoria{
 	
-	var $id_categoria;
+	var $idCategoria;
 	var $estatus;
-	var $fecha_creacion;
-	var $nombre_categoria;
-	var $descripcion_categoria;
-	var $creado_el_categoria;
+	var $fechaCreacion;
+	var $nombreCategoria;
+	var $descripcionCategoria;
+	var $creadoCategoria;
 	
 	}
 ?>
