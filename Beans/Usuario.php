@@ -1,6 +1,5 @@
 <?php
-
-	public class Usuario{
+	class Usuario{
 		
 	var $idUsuario;
 	var $apellido;
