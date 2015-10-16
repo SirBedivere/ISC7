@@ -2,7 +2,7 @@
 
 	public class Usuario{
 		
-	var $id;
+	var $idUsuario;
 	var $apellido;
 	var $nombre;
 	var $email;
