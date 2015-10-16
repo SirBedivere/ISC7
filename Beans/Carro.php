@@ -1,8 +1,10 @@
 <?php
 	public class carro{
 		
-	var $id;
-	var $created_at;	
+	var $idCarro;
+	var $fechaCreacion;	
+	var $estatus
+	var $listaProductos
 	
 	}
 ?>
