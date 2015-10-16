@@ -2,7 +2,6 @@
 include("../Conexion/Conexion.php");
 include("../Beans/Venta.php");
 
-
 class Venta {
 	public $tabla = "venta";
 	/**
@@ -63,6 +62,21 @@ class Venta {
 		$sql = "UPDATE " . $this->tabla . " SET estatus='{$venta->estatus}', FechaCreacion='{$venta->fechaCreacion}', usuario_id='{$venta->usuario}' WHERE id={$venta->idVenta}";
 		return $conexion->ejecutar($sql);
 
+	}
+	
+	private function crearObeto($resultado){
+		$venta = new Venda();
+		$venta->idVenta=$resultado->idVenta;
+		$venta->estatus=$resultado->estatus;
+		$venta->fechaCreacion=$resultado->fechaCreacion;
+		$venta->usuario=$resultado->usuario;
+		$venta->tipoOperacion=$resultado->tipoOperacion;
+		$venta->carritoCompra=$resultado->carritoCompra;
+		
+		$VentaServicio = new VentaServicio();
+		$venta->venta=$VentaServicio->findByID($resultado->idVenta);
+		return $venta; 
+		
 	}
 
 }
