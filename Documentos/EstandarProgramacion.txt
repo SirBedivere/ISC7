@@ -1,4 +1,8 @@
 ﻿Estandar de programacion:
 
 
-1.-Código en Ingles :)
+1.-Código en Español.
+2.-Variable - primera palabra minúscula, segunda con mayúscula.
+3.-Beans - Primera letra en mayúscula.
+4.-Servicios - Nombre del servicio (Primera letra en mayúscula) + la palabra "Servicio".
+5.-Test - Nombre del test (Primera letra en mayúscula) + palabra "Tests".
