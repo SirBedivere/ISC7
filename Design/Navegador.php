@@ -20,11 +20,11 @@
 				</div>
 				
 				<div class="col-md-1 col-xs-1 col-sm-1">
-				Logo
 				
+				<img src="../Css/logo.jpg" class="img-responsive">
 					<div class="row">
 					<div class="col-md-1 col-xs-1 col-sm-1">
-					Logo
+					
 					</div>
 					</div>
 				</div>
@@ -69,15 +69,17 @@
 									</button>			
 						</div>
 						
-						<div class="col-md-2 col-xs-2 col-sm-2 form-group">	
-							<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
-							</div>
-							</form>
-						</div>
+							<div class="col-md-2 col-xs-2 col-sm-2 form-group">								
+							<div class="input-group">
+							  <input type="text" class="form-control" placeholder="Buscar">
+							  <span class="input-group-btn">
+							  <button class="btn btn-default" type="button">Ir</button>
+							  </span>
+							  </div>
+						    </div>
 						
 						<div class="col-md-2 col-xs-2 col-sm-2">
+						
 						</div>
 				
 				</div>
