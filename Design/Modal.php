@@ -1,22 +1,3 @@
-<html>
-	<head>
-		<script src="jquery.min.js">
-		</script>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		
-		<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-
-		<link rel="stylesheet" type="text/css" href="main.css">
-
-	</head>
-	<body>
-		<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-		  Iniciar Sesión
-		</button>
 
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -53,7 +34,11 @@
 		      </div>
 		    </div>
 		  </div>
+<<<<<<< HEAD
 		</div>
 
 	</body>
 </html>
+=======
+		</div>
+>>>>>>> origin/master

@@ -5,6 +5,7 @@
 	var $fechaCreacion;	
 	var $estatus
 	var $listaProductos
+	var $idUsuario
 	
 	}
 ?>
