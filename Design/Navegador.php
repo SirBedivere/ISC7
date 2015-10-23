@@ -12,6 +12,7 @@
 			<script src="../Css/bootstrap/js/bootstrap.min.js">
 			</script>
 			<link rel="stylesheet" type="text/css" href="../Css/main.css"/>		
+			
 		</head>
 		
 			<body>
@@ -33,11 +34,9 @@
 				Nada----------------------------------
 				</div>
 				
-				<div class="col-md-2 col-xs-2 col-sm-2">
-				<button class="btn btn-primary glyphicon glyphicon-user btn" type="button">
-				Iniciar Sesion
-				</button>
-				</div>
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					Iniciar Sesión
+					</button>
 				
 				<div class="col-md-2 col-xs-2 col-sm-2">
 				</div>
@@ -85,6 +84,7 @@
 				</div>
 		
 		
+			<?php include("Modal.php"); ?>
 		
 			</body>
 		
