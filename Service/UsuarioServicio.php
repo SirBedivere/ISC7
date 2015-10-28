@@ -32,6 +32,17 @@ class UsuarioServicio {
 		$consulta = mysqli_query($conexion->obtener(), $sql);
 		return crearObjeto($conexion->ejecutar($sql));
 	}
+	
+	public function iniciarSesion($usuario,$password) {
+		$conexion = new conexion();
+		$sql="SELECT * FROM usuario WHERE usuario='".$usuario."' and password='".$password."';";
+		//echo $sql;
+		$resultado=$conexion->ejecutar($sql);
+		if ($resultado!=null){
+			return $this->crearObjeto($resultado);
+		}
+		return null;
+	}
 
 	public function obtenerTodos() {
 

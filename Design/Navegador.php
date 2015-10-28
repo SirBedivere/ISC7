@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 	<title>
 	
@@ -29,6 +30,11 @@
 						
 							</div>
 							<div class="col-md-4 col-xs-4 col-sm-4">
+								<?php
+								$usuarioBean=$_SESSION['usuarioBean'];
+								if ($usuarioBean!=null){
+									echo "Usuario: ".$_SESSION['usuarioBean']->nombre;
+								}else ?>
 								<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
 									Iniciar Sesión
 								</button>
