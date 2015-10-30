@@ -1,0 +1,8 @@
+1. Registrar usuario 
+2. Editar Usuario 
+3. Login 
+4. Alta de productos 
+5. Baja de producto 
+6. Editar Producto.
+7. Catalogó de productos 
+8. Carrito de compras 
