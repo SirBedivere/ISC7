@@ -15,7 +15,7 @@ class PersonasServicio {
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql =  "INSERT INTO " sthis->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion);"
+		$sql =  "INSERT INTO " .$this->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion)";
 
 		// ejectuar consulta
 		return $conexion->ejecutar($sql);
@@ -32,15 +32,13 @@ class PersonasServicio {
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql =  "SELECT * FROM " sthis->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion);"
+		$sql =  "SELECT * FROM " .$this->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion)";
 
 		// ejectuar consulta
 		$consulta = mysqli_query($conexion->obtener(), $sql);
 
 		// cerrar conexión BD
-		$conexion->cerrar();
-
-		return mysqli_fetch_object($consulta);
+		return $conexion->ejecutar($sql);
 
 	}
 
@@ -54,21 +52,13 @@ class PersonasServicio {
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql =  "SELECT * FROM " sthis->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion);"
+		$sql =  "SELECT * FROM " .$this->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion)";
 
 		// ejectuar consulta
 		$consulta = mysqli_query($conexion->obtener(), $sql);
 
 		// cerrar conexión BD
-		$conexion->cerrar();
-
-		$resultados = array();
-		while ($row = mysqli_fetch_object($consulta)) {
-			$resultados[] = $row;
-		}
-
-		return $resultados;	
-
+	return $conexion->ejecutar($sql);
 	}
 
 
@@ -81,12 +71,12 @@ class PersonasServicio {
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql =  "DELETE " sthis->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion);"
+		$sql =  "DELETE " .$this->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion)";
 
 		mysqli_query($conexion->obtener(), $sql);
 
 		// cerrar conexión BD
-		$conexion->cerrar();
+		return $conexion->ejecutar($sql);
 
 	}
 
@@ -100,13 +90,13 @@ class PersonasServicio {
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql =  "UP DATE " sthis->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion);"
+		$sql =  "UP DATE " .$this->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion)";
 
 		// ejectuar consulta
 		mysqli_query($conexion->obtener(), $sql);
 
 		// cerrar conexión BD
-		$conexion->cerrar();
+		return $conexion->ejecutar($sql);
 
 	}
 	/**
@@ -118,15 +108,13 @@ class PersonasServicio {
 		$conexion = new Conexion();
 
 		// generar SQL del DAO
-		$sql =  "SELECT * FROM " sthis->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion);"
+		$sql =  "SELECT * FROM " .$this->tabla."(id_personas,direccion,cumpleaños,telefono,estatus,fechaDeCreacion)";
 
 		// ejectuar consulta
 		$consulta = mysqli_query($conexion->obtener(), $sql);
 
 		// cerrar conexión BD
-		$conexion->cerrar();
-
-		return mysqli_fetch_object($consulta);
+		return $conexion->ejecutar($sql);
 
 	}
 	
