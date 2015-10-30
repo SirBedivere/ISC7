@@ -2,10 +2,10 @@
 include("../Service/ProductoServicio.php");
 
 	
-	$codigo_de_barra = $_POST['codigo'];
-	$nombre = $_POST['nombre'];
-	$descripcion = $_POST['descripcion'];
-	$precio = $_POST['precio'];
+	$codigo_de_barra = $_POST['CodigoBarras'];
+	$nombre = $_POST['Nombre'];
+	$descripcion = $_POST['Descripcion'];
+	$precio = $_POST['PrecioEntrada'];
 	
 	$ProductoServicio = new ProductoServicio();
 	
