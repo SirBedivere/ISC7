@@ -3,16 +3,17 @@ require_once "../Conexion/Conexion.php";
 require_once "../Beans/Producto.php";
 require_once "../Service/ProductoServicio.php";
 
+$productoBean=$_POST['productoBean'];
 ?>
 
 
-<h2>Agregar Producto</h2>
+<h2>Modificar Producto</h2>
 
 
 <form method="post" action="../funciones/AltaProducto.php">
 
 	<label>Codigo de barras:</label>
-	<input type="text" name="CodigoBarras"  required class="form-control">
+	<input type="text" name="CodigoBarras" value="<?php echo $productoBean->codigoBarra?>"  required class="form-control">
 	<label>Nombre Producto</label>
 	<input type="text" name="Nombre" required class="form-control">
 	<label>Descripci&oacute;n:</label>
