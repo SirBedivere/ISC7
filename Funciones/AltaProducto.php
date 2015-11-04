@@ -1,16 +1,26 @@
 <?php
-include("../Service/ProductoServicio.php");
 
-	
-	$codigo_de_barra = $_POST['CodigoBarras'];
-	$nombre = $_POST['Nombre'];
-	$descripcion = $_POST['Descripcion'];
-	$precio = $_POST['PrecioEntrada'];
+require_once ('../Conexion/Conexion.php');
+require_once ('../Beans/Producto.php');
+require_once ('../Service/ProductoServicio.php');
+
+
+
+	$CodigoBarras=$_POST['CodigoBarras'];
+	$Nombre=$_POST['Nombre'];
+	$Descripcion=$_POST['Descripcion'];
 	
 	$ProductoServicio = new ProductoServicio();
 	
+
+		
+	$Producto = new Producto();
+	$Producto->CodigoBarras=$CodigoBarras;
+	$Producto->Nombre=$Nombre;
+	$Producto->Descripcion=$Descripcion;
+	
 	$ProductoServicio->insert ($Producto);
 	
-	header('Location ../views/index.php');
+	header('Location: ../Views/altaProducto.php');
 	die();
 ?>

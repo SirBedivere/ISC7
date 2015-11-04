@@ -1,11 +1,11 @@
 <?php
-	public class Producto{
+	class Producto{
 	
-	var $id_producto;
-	var $codigo_de_barra;
-	var $nombre;
-	var $descripcion;
-	var $precio;
+	public $id_producto;
+	public $CodigoBarras;
+	public $Nombre;
+	public $Descripcion;
+	public $PrecioEntrada;
 	
 	}
-?>
+?>	

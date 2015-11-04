@@ -1,20 +1,16 @@
 <?php 
-include("../Conexion/Conexion.php");
-include("../Beans/Producto.php");
 
-class Producto {
-	public $tabla = "Producto";
+class  ProductoServicio{
+	
+	
 	/**
 	 * Insert
 	 */
 	public function insert($Producto) {
-
-		// abrir conexión BD
-		$conexion = new Conexion();
-
-		//insertar 
-		$sql = "INSERT INTO " . $this->tabla . " (codigo,nombre,descripcion,precio) VALUES '{$Producto->codigo}','{$Producto->nomrbe}','{$Producto->descripcion}','{$Producto->precio,}'";
-		return $conexion->ejecutar($sql);
+		$conexion=new conexion();
+		$sql="insert into producto (CodigoBarras, Nombre, Descripcion, PrecioEntrada) Values ('".$Producto->CodigoBarras."','".$Producto->Nombre."','".$Producto->Descripcion."','".$Producto->PrecioEntrada."');";
+		$resultado=$conexion->ejecutar($sql);
+		return $resultado;
 	}
 	/**
 	 * Find by ID
@@ -63,14 +59,13 @@ class Producto {
 
 	}
 	
-	private function crearObeto($resultado){
+	public function crearObeto($resultado){
 		$Producto = new Producto();
-		$Producto->idProducto=$resultado->idProducto;
-		$Producto->codigo=$resultado->codigo;
-		$Producto->nombre=$resultado->nombre;
-		$Producto->descripcion=$resultado->descripcion;
-		$Producto->precio=$resultado->precio;
-		
+		$Producto->CodigoBarras=$resultado->CodigoBarras;
+		$Producto->Nombre=$resultado->Nombre;
+		$Producto->Descripcion=$resultado->Descripcion;
+		$Producto->PrecioEntrada=$resultado->PrecioEntrada;
+
 		$ProductoServicio = new ProductoServicio();
 		$Producto->Producto=$ProductoServicio->findByID($resultado->idProducto);
 		return $Producto; 
@@ -78,3 +73,4 @@ class Producto {
 	}
 
 }
+?>
