@@ -7,7 +7,7 @@ require_once ('../Service/ProductoServicio.php');
 
 	$ProductoServicio = new ProductoServicio();
 
-	$productoBean=$ProductoServicio->obtenerPorId($_POST['idProducto']);
+	$productoBean=$ProductoServicio->findByid($_POST['idProducto']);
 
 	$productoBean->CodigoBarras=$_POST['CodigoBarras'];
 	$productoBean->Nombre=$_POST['Nombre'];
