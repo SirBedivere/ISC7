@@ -1,7 +1,10 @@
 <?php 
+
+	include("../Conexion/Conexion.php");
+	include("../Beans/Usuario.php");
 	include("../Service/UsuarioServicio.php");
 	include("../Service/PersonasServicios.php");
-
+	
 	$registrarusuario = new RegistrarUsuario();
 	
 	// datos usuario

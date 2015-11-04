@@ -1,6 +1,5 @@
 <?php 
 
-include("../Conexion/Conexion.php");
 include("../Beans/Personas.php");
 
 class PersonasServicio {

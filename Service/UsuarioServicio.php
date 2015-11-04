@@ -1,5 +1,4 @@
 <?php 
-include("../Conexion/Conexion.php");
 
 class UsuarioServicio {
 
