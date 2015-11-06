@@ -29,9 +29,14 @@
 						
 							</div>
 							<div class="col-md-4 col-xs-4 col-sm-4">
-								<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
-									Iniciar Sesión
-								</button>
+								<form action="../views/ViewUsuario.php" method="post">
+									<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
+										Iniciar Sesión
+									</button>
+									<button class="btn btn-primary" type="submit" >
+										Registrar
+									</button>
+								</form>
 							</div>
 						</div>
 						<div class="row">
