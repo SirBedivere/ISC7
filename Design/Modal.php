@@ -34,11 +34,11 @@
 		      </div>
 		    </div>
 		  </div>
-<<<<<<< HEAD
+
 		</div>
 
 	</body>
 </html>
-=======
+
 		</div>
->>>>>>> origin/master
+
