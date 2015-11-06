@@ -13,7 +13,7 @@
 
 	</head>
 	<body>
-	<form method="../Funciones/actualizarUsaurio.php" action="">
+	<form method="POST" action="../Funciones/actualizarUsaurio.php">
 				<?php $usuarioBean= $_SESSION['usuarioBean']?>
 			<input type="hidden" name="idUsuario" value="<?php $usuarioBean->idUsuario?>" />
 		      <div class="row">
