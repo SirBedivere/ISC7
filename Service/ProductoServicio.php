@@ -33,8 +33,9 @@ class  ProductoServicio{
 		$sql = "SELECT * FROM  Producto";
 		//$productos[];
 		$x=0;
-		$productosTabla=$conexion->ejecutar($sql)
-		foreach($productoTabla as $productosTabla){
+		$productosTabla=$conexion->ejecutarConsulta($sql);
+		
+		while($productoTabla = mysqli_fetch_object($productosTabla)){
 			$productos[$x]=$this->crearObeto($productoTabla);
 			$x++;
 		}
@@ -68,6 +69,7 @@ class  ProductoServicio{
 	
 	public function crearObeto($resultado){
 		$Producto = new Producto();
+		
 		$Producto->CodigoBarras=$resultado->CodigoBarras;
 		$Producto->Nombre=$resultado->Nombre;
 		$Producto->Descripcion=$resultado->Descripcion;
