@@ -8,7 +8,7 @@ class  ProductoServicio{
 	 */
 	public function insert($Producto) {
 		$conexion=new conexion();
-		$sql="insert into producto (CodigoBarras, Nombre, Descripcion, PrecioEntrada) Values ('".$Producto->CodigoBarras."','".$Producto->Nombre."','".$Producto->Descripcion."','".$Producto->PrecioEntrada."');";
+		$sql="insert into producto (CodigoBarras, Imagen, Nombre, Descripcion, PrecioEntrada, PrecioSalida, CategoriaId, InventarioMin, EsActivo) Values ('".$Producto->CodigoBarras."',".$Producto->Imagen.",'".$Producto->Nombre."','".$Producto->Descripcion."','".$Producto->PrecioEntrada.",".$Producto->PrecioSalida.",".$Producto->CategoriaId.",".$Producto->InventarioMin.",".$Producto->EsActivo."');";
 		$resultado=$conexion->ejecutar($sql);
 		return $resultado;
 	}
@@ -69,12 +69,16 @@ class  ProductoServicio{
 	
 	public function crearObeto($resultado){
 		$Producto = new Producto();
-		
+		$Producto->Id=$resultado->Id;
 		$Producto->CodigoBarras=$resultado->CodigoBarras;
+		$Producto->Imagen=$resultado->Imagen;
 		$Producto->Nombre=$resultado->Nombre;
 		$Producto->Descripcion=$resultado->Descripcion;
 		$Producto->PrecioEntrada=$resultado->PrecioEntrada;
-
+		$Producto->PrecioSalida=$resultado->PrecioSalida;
+		$Producto->Categoria=$resultado->CategoriaId;
+		$Producto->InventarioMinimo=$resultado->InventarioMin;
+		$Producto->Activo=$resultado->EsActivo;
 		//$ProductoServicio = new ProductoServicio();
 		//$Producto->Producto=$ProductoServicio->findByID($resultado->idProducto);
 		return $Producto; 
