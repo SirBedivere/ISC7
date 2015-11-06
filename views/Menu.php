@@ -6,10 +6,10 @@
 	<title>Menu</title>
 	
 		<script src="jquery-2.1.4.min.js"></script>
-		<link rel="stylesheet" href="bootstrap2/bootstrap/css/bootstrap.min.css"></link>
-		<link rel="stylesheet" href="bootstrap2/bootstrap/css/bootstrap-theme.min.css"></link>		
-		<script src="bootstrap2/bootstrap/js/bootstrap.min.js"></script>
-		<link rel="stylesheet"  type="text/css" href="bootstrap2/css/main.css"></link>
+		<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css"></link>		
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet"  type="text/css" href="css/main.css"></link>
 		
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="main.js"></script>

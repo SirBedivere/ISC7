@@ -1,13 +1,21 @@
+<?php
+require_once "../Conexion/Conexion.php";
+require_once "../Beans/Producto.php";
+require_once "../Service/ProductoServicio.php";
 
-<!DOCTYPE html>
+// productos
+$productoServicio = new ProductoServicio();
+$productos = $productoServicio->findAll();
+
+?>
 <html>
 <head>
 
 	<meta charset="utf-8" />	
 
-    <link href="bootstrap2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap2/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <script src="bootstrap2/bootstrap/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -45,24 +53,19 @@
 		<th></th>
 	</thead>
 	Producto
+	<?php foreach($producto as $productos){ ?>
 	<tr>
-		<td>Id Producto</td>
-		<td>
-			Imagen de producto
-				<img src="carro.jpg" style="width:64px;">
-			
-		</td>
-		<td>Nombre producto</td>
-		<td>Precio de entrada></td>
-		<td>Precio Salida</td>
-		<td>Categoria</td>
-		<td>Inventario Minimo</td>
-		<td>Activo</td>
-		
+		<td><?php echo $producto->id_producto; ?></td>
+		<td><?php echo $producto->CodigoBarras; ?></td>
+		<td><?php echo $producto->Nombre; ?></td>
+		<td><?php echo $producto->Descripcion; ?></td>
+		<td><?php echo $producto->PrecioEntrada; ?></td>
+		<td></td>
+		<td><td>
+		<td></td>
 
-		
 	</tr>
-	
+	<?php } ?>
 </table>
 <div class="btn-group pull-right">
 

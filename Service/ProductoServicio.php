@@ -30,8 +30,15 @@ class  ProductoServicio{
 		// abrir conexión BD
 		$conexion = new Conexion();
 		// generar SQL del DAO
-		$sql = "SELECT * FROM " . $this->tabla;
-		return $conexion->ejecutar($sql);
+		$sql = "SELECT * FROM  Producto";
+		//$productos[];
+		$x=0;
+		$productosTabla=$conexion->ejecutar($sql)
+		foreach($productoTabla as $productosTabla){
+			$productos[$x]=$this->crearObeto($productoTabla);
+			$x++;
+		}
+		return $productos;
 	
 	}
 	/**
@@ -66,8 +73,8 @@ class  ProductoServicio{
 		$Producto->Descripcion=$resultado->Descripcion;
 		$Producto->PrecioEntrada=$resultado->PrecioEntrada;
 
-		$ProductoServicio = new ProductoServicio();
-		$Producto->Producto=$ProductoServicio->findByID($resultado->idProducto);
+		//$ProductoServicio = new ProductoServicio();
+		//$Producto->Producto=$ProductoServicio->findByID($resultado->idProducto);
 		return $Producto; 
 		
 	}
