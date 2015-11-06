@@ -13,7 +13,7 @@
 
 	</head>
 	<body>
-	<form method="POST" action="../Funciones/actualizarUsaurio.php">
+	<form method="../Funciones/actualizarUsaurio.php" action="">
 				<?php $usuarioBean= $_SESSION['usuarioBean']?>
 			<input type="hidden" name="idUsuario" value="<?php $usuarioBean->idUsuario?>" />
 		      <div class="row">
@@ -53,6 +53,36 @@
 			      </div>
 			      <div class="col-md-6 col-xs-6">
 			      		<label class="col-md-4 col-xs-4">Imagen</label> <input type="text" name="imagen" value="<?php $usuarioBean->imagen?>" />
+			      </div>
+			      <div class="col-md-3 col-xs-3">
+			      </div>
+			   </div>
+			</br>
+			<div class="row">
+			      <div class="col-md-3 col-xs-3">
+			      </div>
+			      <div class="col-md-6 col-xs-6">
+			      		<label class="col-md-4 col-xs-4">Direccion</label> <input type="text" name="imagen" value="<?php $usuarioBean->imagen?>" />
+			      </div>
+			      <div class="col-md-3 col-xs-3">
+			      </div>
+			   </div>
+			</br>
+			<div class="row">
+			      <div class="col-md-3 col-xs-3">
+			      </div>
+			      <div class="col-md-6 col-xs-6">
+			      		<label class="col-md-4 col-xs-4">Telefono</label> <input type="text" name="imagen" value="<?php $usuarioBean->imagen?>" />
+			      </div>
+			      <div class="col-md-3 col-xs-3">
+			      </div>
+			   </div>
+			</br>
+			<div class="row">
+			      <div class="col-md-3 col-xs-3">
+			      </div>
+			      <div class="col-md-6 col-xs-6">
+			      		<label class="col-md-4 col-xs-4">Cumpleanos</label> <input type="text" name="imagen" value="<?php $usuarioBean->imagen?>" />
 			      </div>
 			      <div class="col-md-3 col-xs-3">
 			      </div>

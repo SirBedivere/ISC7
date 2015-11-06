@@ -6,7 +6,10 @@ $usuarioBean->nombre = $_POST['newApellido'];
 $$usuarioBean->apellido = $_POST['newNombre'];
 $usuarioBean->email = $_POST['newEmail'];
 $usuarioBean->imagen = $_POST['newImagen'];
-$usuarioBean->password = $_POST['newPassword'];
+$usuarioBean->imagen = $_POST['newDireccion'];
+$usuarioBean->imagen = $_POST['newTelefono'];
+$usuarioBean->password = $_POST['newCumpleaños'];
+
 
 $usuarioServicio= new UsuarioServicio();
 
