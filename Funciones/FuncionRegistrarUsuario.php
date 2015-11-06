@@ -4,21 +4,21 @@
 	include("../Beans/Usuario.php");
 	include("../Service/UsuarioServicio.php");
 	include("../Service/PersonasServicios.php");
-	
-	$registrarusuario = new RegistrarUsuario();
+
+	$usuarioServicio = new UsuarioServicio();
 	
 	// datos usuario
 	$objeto = new Usuario();
-	$objeto->apellido=$_POS['apellido'];
+	$objeto->apellido=$_POST['apellido'];
 	$objeto->nombre=$_POST['nombre'];
 	$objeto->email=$_POST['email'];
-	$objeto->imagen=$_POST['imagen'];
-	$objeto->direccion=$_POST['direccion'];
-	$objeto->telefono=$_POST['telefono'];
-	$objeto->cumpleaños=$_POST['cumpleaños'];
+	$persona = new Persona();
+	$persona->direccion=$_POST['direccion'];
+	$persona->telefono=$_POST['telefono'];
+	$persona->cumpleaños=$_POST['cumpleaños'];
 	
 	
-	$registrarusuario->insertar($objeto);
+	$usuarioServicio->insertar($objeto);
 	header('Location: ../views/index');
 	exit;
 ?> 
