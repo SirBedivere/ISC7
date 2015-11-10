@@ -1,9 +1,13 @@
-.active, .carousel{
+img.Logo{
 	
-	width: 1300px;
-	height:250px;
+	height: 25px;
+	width: 25px;
 }
 
-
-
+.Pie{
+	height: 100px;
+	width: auto;
+	background: #000000;
+	color: #FFFFFF;
+}
 

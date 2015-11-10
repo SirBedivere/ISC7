@@ -5,7 +5,7 @@
 		
 		<head>
 			<meta charset=utf-8>
-			<script src="../Css/jquery.min.js">
+			<script src="../Css/jquery.js">
 			</script>
 			<link rel="stylesheet" href="../Css/bootstrap/css/bootstrap.min.css"/>
 			<link rel="stylesheet" href="../Css/bootstrap/css/bootstrap-theme.min.css"/>
@@ -16,22 +16,17 @@
 		</head>
 		
 			<body>
-				<div>
-				<?php include "Encabezado.php";?>
-				</div>
-				<div>
-				hola
-				e
-				e
-				q
-				978
-				56454.
-				
-				</div>
-				<div>
-				<?php include "pie.php";?>
+				<div class="Encabezado">
+					<?php include "Encabezado.php";?>
 				</div>
 				
+				<div class="Contenido">
 				
-			</body>
-</html>
+				</div>
+				
+				<div class="Pie">
+					<?php include "Pie.php";?>
+				</div>
+			
+				
+			

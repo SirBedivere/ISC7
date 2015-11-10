@@ -1,50 +1,62 @@
-<div class="row">
-					<div class="col-md-2 col-xs-2 col-sm-2">
-					</div>
-				
-					<div class="col-md-1 col-xs-1 col-sm-1">
-						<img src="../Css/logo.jpg" width="100" height="100" class="img-responsive">
-					</div>
-					<div class="col-md-7 col-xs-7 col-sm-7" >
-						<div class="row">
-							<div class="col-md-8 col-xs-8 col-sm-8">
-						
+
+	<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <nav class="navbar navbar-default">
+						  <div class="container-fluid">
+							<div class="navbar-header">
+							  <a class="navbar-brand" href="#">
+								<img class="Logo" src="../Css/logo.jpg">
+							  </a>
 							</div>
-							<div class="col-md-4 col-xs-4 col-sm-4">
-								<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
-									Iniciar Sesión
-								</button>
-							</div>
+						  </div>
+						</nav>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+						<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						  </ul>
+						</li>
+					  </ul>
+					  <form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+						  <input type="text" class="form-control" placeholder="Search">
 						</div>
-						<div class="row">
-							<div class="col-md-8 col-xs-8 col-sm-8">
-								<button class="btn btn-primary glyphicon glyphicon-th-large btn" type="button" >
-								Inicio
-								</button>
-									
-								<button class="btn btn-primary glyphicon glyphicon-envelope btn" type="button">
-								Contacto
-								</button>
-									
-								<button class="btn btn-primary glyphicon glyphicon-globe btn" type="button">
-								Sucursales
-								</button>
-									
-								<button class="btn btn-primary glyphicon glyphicon-user btn" type="button" >
-								Categorias
-								</button>
-							</div>
-							<div class="col-md-4 col-xs-4 col-sm-4">
-								<div class="input-group">
-									<input type="text" class="form-control" placeholder="Buscar">
-									<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Ir</button>
-							  		</span>
-							  	</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-2 col-xs-2 col-sm-2">
-					</div>
-				</div>
-			<?php include("Modal.php"); ?>
+						<button type="submit" class="btn btn-default">Buscar</button>
+					  </form>
+					  <ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</li>
+					  </ul>
+					</div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+</nav>
