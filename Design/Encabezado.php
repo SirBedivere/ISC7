@@ -45,7 +45,8 @@
 						<button type="submit" class="btn btn-default">Buscar</button>
 					  </form>
 					  <ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Link</a></li>
+						<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Sign in</button>
+							<?php include "Modal.php";?>
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 						  <ul class="dropdown-menu">
@@ -60,3 +61,4 @@
 					</div><!-- /.navbar-collapse -->
 				  </div><!-- /.container-fluid -->
 </nav>
+<button type="submit" class="btn btn-default">Buscar</button>
