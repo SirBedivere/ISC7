@@ -1,4 +1,7 @@
 <html>
+	<?php
+		include("../Design/Navegador.php");
+	?>
 	<head>
 		<title>Registro de Usuario</title>
 	</head>
@@ -34,3 +37,6 @@
 
 	</body>
 </html>
+<?PHP
+include("../Design/pie.php");
+?>
