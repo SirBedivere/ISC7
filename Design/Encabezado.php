@@ -60,5 +60,9 @@
 					  </ul>
 					</div><!-- /.navbar-collapse -->
 				  </div><!-- /.container-fluid -->
+<<<<<<< HEAD
 </nav>
 <button type="submit" class="btn btn-default">Buscar</button>
+=======
+</nav>
+>>>>>>> origin/master

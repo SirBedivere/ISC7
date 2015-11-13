@@ -26,7 +26,11 @@
 				
 				<div class="Pie">
 					<?php include "Pie.php";?>
+<<<<<<< HEAD
 				</div>
 			
 				
 			
+=======
+				</div>
+>>>>>>> origin/master
