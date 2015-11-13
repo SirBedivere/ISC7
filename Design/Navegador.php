@@ -27,6 +27,6 @@
 				<div class="Pie">
 					<?php include "Pie.php";?>
 				</div>
-			lol
+			
 				
 			

@@ -61,4 +61,4 @@
 					</div><!-- /.navbar-collapse -->
 				  </div><!-- /.container-fluid -->
 </nav>
-lol
+<button type="submit" class="btn btn-default">Buscar</button>
