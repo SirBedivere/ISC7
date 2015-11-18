@@ -57,6 +57,7 @@ class UsuarioServicio {
 		$usuario->nombre=$resultado->nombre;
 		$usuario->email=$resultado->email;
 		$usuario->imagen=$resultado->imagen;
+		$usuario->esAdmin=$resultado->esAdmin;
 		return $usuario;	
 
 	}
