@@ -50,6 +50,13 @@ class UsuarioServicio {
 		return crearObjeto($conexion->ejecutar($sql));
 	}
 
+	public function IniciarSecion($nombre) {
+		$conexion = new conexion();
+		$sql="* SELECT * FROM usuario WHERE idUsuario="+$nombre+";";
+		$consulta = mysqli_query($conexion->obtener(), $sql);
+		return crearObjeto($conexion->ejecutar($sql));
+	}
+	
 	private function crearObjeto($resultado){
 		$usuario = new Usuario();
 		$usuario->idUsuario=$resultado->idUsuario;
