@@ -7,6 +7,7 @@
 	var $email;
 	var $password;
 	var $imagen;
+	var $esAdmin;
 	}
 	
 ?>	

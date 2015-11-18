@@ -17,20 +17,17 @@
 		
 			<body>
 				<div class="Encabezado">
-					<?php include "Encabezado.php";?>
+					<?php
+					session_start();
+
+
+					$usuarioBean=isset($_SESSION['usuarioBean']) ? $_SESSION['usuarioBean']:"";
+					if ($usuarioBean!=null && $usuarioBean->esAdmin!=null && $usuarioBean->esAdmin!=0){
+						include "EncabezadoAdmin.php";
+					}else{
+						include "Encabezado.php";
+					}?>
 				</div>
 				
 				<div class="Contenido">
-				
-				</div>
-				
-				<div class="Pie">
-					<?php include "Pie.php";?>
-<<<<<<< HEAD
-				</div>
 			
-				
-			
-=======
-				</div>
->>>>>>> origin/master
