@@ -35,6 +35,12 @@ class Conexion {
 		return mysqli_fetch_object($resultado);
 	}
 
+	public function ejecutarConsulta($sql){
+		$resultado = mysqli_query($this->obtener(),$sql);
+		$this->cerrar();
+		return $resultado;
+	}
+
 
 	/**
 	 * Cerrar conexión a BD
