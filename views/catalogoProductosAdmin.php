@@ -14,11 +14,15 @@ if($categoria!=""){
 
 ?>
 <div class="Encabezado">
-	<?php include "../Design/navegador.php";?>
+	<?php include "../Design/navegadorAdmin.php";?>
 </div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<div class="btn-group  pull-right">
+					<a href="http://localhost/ISC7/views/altaProducto.php" class="btn btn-default">Agregar Producto</a>
+
+				</div>
 <h1>Lista de Productos</h1>
 		<div class="clearfix"></div>
 
@@ -28,28 +32,37 @@ if($categoria!=""){
 <div class="clearfix"></div>
 <br><table class="table table-bordered table-hover">
 	<thead>
-
+		<th>Id</th>
+		<th>Codigo</th>
 		<th>Imagen</th>
 		<th>Nombre</th>
 		<th>Descripcion</th>
+		<th>Precio Entrada</th>
 		<th>Precio Salida</th>
 		<th>Categoria</th>
-		<th>Disponibles</th>
-	
+		<th>Minima</th>
+		<th>Activo</th>
+		<th></th>
 		
 	</thead>
 	Producto
 	<?php foreach($productos as $producto ){ ?>
 	<tr>
-
+		<td><?php echo $producto->Id; ?></td>
+		<td><?php echo $producto->CodigoBarras; ?></td>
 		<td><?php echo $producto->Imagen; ?></td>
 		<td><?php echo $producto->Nombre; ?></td>
 		<td><?php echo $producto->Descripcion; ?></td>
+		<td><?php echo $producto->PrecioEntrada; ?></td>
 		<td><?php echo $producto->PrecioSalida; ?></td>
 		<td><?php echo $producto->Categoria; ?></td>
 		<td><?php echo $producto->InventarioMinimo; ?></td>
+		<td><?php echo $producto->Activo; ?></td>
 		
-
+		<td style="width:70px;">
+		<a href="modificarProducto.php" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-pencil"></i></a>
+		<a href="index.php?view=delproduct&id=1" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+		</td>
 
 		</tr>
 	<?php } ?>
