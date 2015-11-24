@@ -1,24 +1,32 @@
+
+
+
 <?php 
-
-	include("../Conexion/Conexion.php");
-	include("../Beans/Usuario.php");
-	include("../Service/UsuarioServicio.php");
-	include("../Service/PersonasServicios.php");
-
-	$usuarioServicio = new UsuarioServicio();
-	
-	// datos usuario
-	$objeto = new Usuario();
-	$objeto->apellido=$_POST['apellido'];
-	$objeto->nombre=$_POST['nombre'];
-	$objeto->email=$_POST['email'];
-	$persona = new Persona();
-	$persona->direccion=$_POST['direccion'];
-	$persona->telefono=$_POST['telefono'];
-	$persona->cumpleaños=$_POST['cumpleaños'];
+	require_once("../Conexion/Conexion.php");
+	require_once("../Beans/Usuario.php");
+	require_once("../Service/UsuarioServicio.php");
+		
+	$Nombre=$_POST['Nombre'];
+	$Apellido=$_POST['Apellido'];
+	$Correo=$_POST['Correo'];
+	$Contrasena=$_POST['Contrasena'];
 	
 	
-	$usuarioServicio->insertar($objeto);
-	header('Location: ../views/index');
-	exit;
+	$UsuarioServicio = new UsuarioServicio();
+	
+	
+	$Usuario = new Usuario();
+	
+	$Usuario->Nombre=$Nombre;
+	$Usuario->Apellido=$Apellido;
+	$Usuario->Correo=$Correo;
+	$Usuario->Contrasena=$Contrasena;
+	
+	
+	
+	$UsuarioServicio->insert($Usuario);
+	
+	
+	header ("Location: http://localhost/ISC7/views/mensaje.php");
+	
 ?> 

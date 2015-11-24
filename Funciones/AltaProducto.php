@@ -6,21 +6,31 @@ require_once ('../Service/ProductoServicio.php');
 
 
 
-	$CodigoBarras=$_POST['CodigoBarras'];
 	$Nombre=$_POST['Nombre'];
 	$Descripcion=$_POST['Descripcion'];
+	$InventarioMin=$_POST['InventarioMin'];
+	$PrecioEntrada=$_POST['PrecioEntrada'];
+	$PrecioSalida=$_POST['PrecioSalida'];
+	
+	$FechaCreacion=$_POST['FechaCreacion'];
 	
 	$ProductoServicio = new ProductoServicio();
 	
 
 		
 	$Producto = new Producto();
-	$Producto->CodigoBarras=$CodigoBarras;
 	$Producto->Nombre=$Nombre;
 	$Producto->Descripcion=$Descripcion;
+	$Producto->InventarioMin=$InventarioMin;
+	$Producto->PrecioEntrada=$PrecioEntrada;
+	$Producto->PrecioSalida=$PrecioSalida;
+	
+	$Producto->FechaCreacion=$FechaCreacion;
+	
 	
 	$ProductoServicio->insert ($Producto);
 	
-	header('Location: ../Views/altaProducto.php');
+		header ("Location: http://localhost/ISC7/views/altaProducto.php");
 	die();
+	
 ?>
