@@ -1,14 +1,15 @@
 <?php
-include("../Conexion/Conexion.php");
-include("../Beans/Categoria.php");
 
-class Categoria{
+class CategoriaServicio{
+	
+	
+	
+	public function insert($Categoria) {
 
-	public function insert($categoria) {
-
-		$conexion = new Conexion();
-		$sql = "INSERT INTO " . $this->tabla . " (idCategoria, estatus, fechaCreacion, nombreCategoria, descripcionCategoria, creadoCategoria) VALUES ('{$objeto->idCategoria}','{$objeto->estatus}','{$objeto->fechaCreacion}','{$objeto->nombreCategoria}','{$objeto->descripcionCategoria}','{$objeto->fechaCreacion}','{$objeto->creadoCategoria}')";
-		return $conexion->ejecutar($sql);
+		$conexion=new conexion();
+		$sql="insert into categoria (Nombre, Descripcion, FechaCreacion) Values ('".$Categoria->Nombre."','".$Categoria->Descripcion."','".$Categoria->FechaCreacion."');";
+		$resultado=$conexion->ejecutar($sql);
+		return $resultado;
 	}
 
 
@@ -26,13 +27,18 @@ class Categoria{
 
 
 
-	public function findAll() {
-
-		$conexion = new Conexion();
-		$sql = "SELECT * FROM " . $this->tabla;
-		$sql = $dao->findAll($id);
-		return $conexion->ejecutar($sql);
-
+	public function findAll() {		
+		$conexion = new Conexion();		
+		$sql = "SELECT * FROM  categoria";
+		$x=0;
+		$categoriaTabla=$conexion->ejecutarConsulta($sql);	
+		
+		while($categoriaTabla = mysqli_fetch_object($categoriaTabla)){
+			$categoria[$x]=$this->crearObeto($categoriaTabla);
+			$x++;
+		}
+		return $categoria;
+	
 	}
 
 
@@ -55,6 +61,15 @@ class Categoria{
 		$sql = $dao->update($objeto);
 		return $conexion->ejecutar($sql);
 
+	}
+	public function crearObeto($resultado){
+		$Categoria = new Categoria();
+		$Categoria->Id=$resultado->Id;
+		$Categoria->Nombre=$resultado->Nombre;
+		$Categoria->Descripcion=$resultado->Descripcion;
+		$Categoria->FechaCreacion=$resultado->FechaCreacion;
+		return $resultado; 
+		
 	}
 
 }

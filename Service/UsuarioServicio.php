@@ -1,10 +1,11 @@
-<?php 
+ <?php 
 
 class UsuarioServicio {
 
-	public function insertar($usuario) {
+	public function insert($Usuario) {
+		
 		$conexion=new conexion();
-		$sql="Insert into usuario (id, apellido, nombre, email, password, imagen) Values ('".$usuario->idUsuario."','".$usuario->apellido."','".$usuario->nombre."','".$usuario->email."','".$usuario->password."','".$usuario->imagen."');";
+		$sql="insert into usuario (Nombre, Apellido, Correo, Contrasena) Values ('".$Usuario->Nombre."','".$Usuario->Apellido."','".$Usuario->Correo."','".$Usuario->Contrasena."');";
 		$resultado=$conexion->ejecutar($sql);
 		return $resultado;
 
@@ -50,21 +51,13 @@ class UsuarioServicio {
 		return crearObjeto($conexion->ejecutar($sql));
 	}
 
-	public function IniciarSecion($nombre) {
-		$conexion = new conexion();
-		$sql="* SELECT * FROM usuario WHERE idUsuario="+$nombre+";";
-		$consulta = mysqli_query($conexion->obtener(), $sql);
-		return crearObjeto($conexion->ejecutar($sql));
-	}
-	
 	private function crearObjeto($resultado){
 		$usuario = new Usuario();
-		$usuario->idUsuario=$resultado->idUsuario;
-		$usuario->apellido=$resultado->apellido;
-		$usuario->nombre=$resultado->nombre;
-		$usuario->email=$resultado->email;
-		$usuario->imagen=$resultado->imagen;
-		$usuario->esAdmin=$resultado->esAdmin;
+		$Usuario->Id=$resultado->Id;
+		$Usuario->Nombre=$resultado->Nombre;
+		$Usuario->Apellido=$resultado->Apellido;
+		$Usuario->Correo=$resultado->Correo;
+		$Usuario->Contraseña=$resultado->Contraseña;
 		return $usuario;	
 
 	}
